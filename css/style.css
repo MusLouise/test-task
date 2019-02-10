@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+
+    background-color: #f4f4f4;
+}
+
+button {
+    width: 0;
+    height: 0;
+}
+
+.weather-forecast {
+    position: relative;
+    width: 810px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.left::before {
+    content: "";
+
+    position: absolute;
+    top: 160px;
+    left: -30px;
+
+    width: 22px;
+    height: 40px;
+
+    background-image: url(../img/icon-left.svg);
+}
+
+.left.disabled, .right.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.right::after {
+    content: "";
+
+    position: absolute;
+    top: 160px;
+    right: -30px;
+
+    width: 22px;
+    height: 40px;
+
+    background-image: url(../img/icon-right.svg);
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.day {
+    position: relative;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    background-color: #ffffff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.date,
+.temperature-day {
+    font-size: 20px;
+}
+
+.date {
+    padding-bottom: 75px;
+}
+
+.temperature-night {
+    padding-bottom: 35px;
+}
+
+.temperature-night,
+.additional-info {
+    color: #6f6f6f;
+}
+
+.snow::after {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    left: 80px;
+
+    width: 67px;
+    height: 65px;
+
+    background: url("../img/Snow.svg") no-repeat 0 0;
+}
+
+.sunny::after{
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    left: 80px;
+
+    width: 41px;
+    height: 41px;
+
+    background: url("../img/Mostly Sunny.svg") no-repeat 0 0;
+}
+
+.rain::before {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    left: 70px;
+
+    width: 67px;
+    height: 60px;
+
+    background: url("../img/Rain.svg") no-repeat 0 0;
+}
+.sleet::before {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    left: 80px;
+
+    width: 67px;
+    height: 65px;
+
+    background: url("../img/Sleet.svg") no-repeat 0 0;
+}
+.cloudy::before {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    left: 70px;
+
+    width: 67px;
+    height: 37px;
+
+    background: url("../img/Mostly Cloudy.svg") no-repeat 0 0;
+}
